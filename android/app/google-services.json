@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "868926503951",
+    "project_id": "kts-app-a2049",
+    "storage_bucket": "kts-app-a2049.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868926503951:android:4a60ccf98d95005eb5777a",
+        "android_client_info": {
+          "package_name": "com.example.task_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868926503951-k3l2maam904n3hdg6nbr5481fsir947i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.task_manager",
+            "certificate_hash": "056f207c2499ae9bdb102d74b1705ac129d633da"
+          }
+        },
+        {
+          "client_id": "868926503951-sn7bbiar2dkmcebrps8ms4fq8jju5l1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmU_dSQsWf1nvakUCJ5hjsKkQ_i8mKrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868926503951-ot6gg0vmrc2fdilm1o6fj9h9hv7qbakg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "868926503951-iff3vtpvuj9bttgkek6fbcs3b4oahfaq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taskManager"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868926503951:android:cdd72671e2b0068ab5777a",
+        "android_client_info": {
+          "package_name": "info.czekanski.bet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868926503951-s4pk2bam9nea5vm4r6ec6ntshf05clet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.czekanski.bet",
+            "certificate_hash": "056f207c2499ae9bdb102d74b1705ac129d633da"
+          }
+        },
+        {
+          "client_id": "868926503951-sn7bbiar2dkmcebrps8ms4fq8jju5l1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmU_dSQsWf1nvakUCJ5hjsKkQ_i8mKrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868926503951-ot6gg0vmrc2fdilm1o6fj9h9hv7qbakg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "868926503951-iff3vtpvuj9bttgkek6fbcs3b4oahfaq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taskManager"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
