@@ -33,8 +33,8 @@ Ensure you have the following installed:
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/your-repo/task_manager.git
-   cd task_manager
+   git clone https://github.com/Asrat001/smartTask.git
+   cd smartTask
    ```
 
 2. **Install Dependencies**
@@ -104,6 +104,5 @@ Key dependencies used in the project:
 
 This project is licensed under the MIT License.
 
----
-Feel free to modify the README as per your project requirements.
+
 
