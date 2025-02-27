@@ -30,6 +30,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: "2.10.3"
+          channel: 'stable'
           cache: true
 
       - name: Clean and Reinstall Dependencies
