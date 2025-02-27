@@ -1,6 +1,7 @@
-# Task Manager
+# Task Manager (MVVM Architecture)
 
 Smart Task Manager is a Flutter application designed to help users manage their tasks efficiently with a modern UI and robust features.
+
 
 ## Project Details
 
@@ -90,8 +91,13 @@ Key dependencies used in the project:
 
 - **Run Tests**
   ```sh
-  flutter test
+  Due to a tight deadline, I am unable to write tests for the app properly
   ```
+
+
+
+
+
 
 ## Contribution Guidelines
 
