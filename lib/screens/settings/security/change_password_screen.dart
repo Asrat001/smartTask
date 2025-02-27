@@ -8,6 +8,9 @@ import 'package:task_manager/l10n/l10n.dart';
 import 'package:task_manager/repositories/auth_repository.dart';
 import 'package:task_manager/components/forms/small_form_svg.dart';
 
+import '../../../services/dialog_service.dart';
+import '../../../services/locator_service.dart';
+
 class ChangePasswordScreen extends StatelessWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);
 
@@ -59,31 +62,7 @@ class _ChangePasswordScreen extends StatelessWidget{
           isLoading: formState.isLoading,
           buttonText: context.l10n.confirm,
           onButtonPressed: () async {
-            try{
-              context.read<ChangePasswordCubit>().submitted(
-                context: context,
-                currentPassword: currentPasswordController.text,
-                newPassword: newPasswordController.text
-              );
-
-              final nextState = await context.read<ChangePasswordCubit>().stream.first;
-              if(nextState.changed){
-                AutoRouter.of(context).pop();
-
-                final currentContext = AutoRouter.of(context).navigatorKey.currentContext; 
-                if(currentContext != null) {
-                  RoundedSnackBar(
-                    context: currentContext,
-                    text: context.l10n.snackBar_passwordUpdated,
-                    action: SnackBarAction(
-                      label: "OK",
-                      onPressed: () {},
-                    )
-                  ).show();
-                }
-              }
-            }
-            catch(_){}
+            locator<DialogService>().showSomethingWentWrongDialog("Feature Coming Soon");
           },
         );
       }

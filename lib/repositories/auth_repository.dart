@@ -101,13 +101,7 @@ class AuthRepository {
   }
 
   Future<void> logout() async {
-    // try{
-    //   final dio = await base.dioRefreshToken;
-    //   await dio.post("/auth/logout");
-    // }
-    // catch (error){
-    //   await ResponseError.validate(error, null);
-    // }
+  await firebaseService.signOut();
   }
 
   Future<bool> logoutAll() async {

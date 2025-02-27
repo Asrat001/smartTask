@@ -59,7 +59,7 @@ class _ProfileScreenState extends State<_ProfileScreen>{
       if(email != null) emailController.text = email;
 
       final userImage=authState.user?.imageUrl;
-      if(userImage !=null)imageUrl=userImage;
+      if(userImage!.isEmpty)imageUrl=userImage;
 
     });
 

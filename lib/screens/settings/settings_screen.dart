@@ -141,7 +141,7 @@ class _SettingsScreenState extends State<_SettingsScreen>{
                           title: context.l10n.settings_security,
                           icon: Icons.lock_rounded,
                           color: const Color(0xFF31A7E1),
-                          onTap: () => AutoRouter.of(context).navigate(const SecurityRoute()),
+                          // onTap: () => AutoRouter.of(context).navigate(const SecurityRoute()),
                         ),
                         RoundedListTile(
                           title: context.l10n.settings_notifications,

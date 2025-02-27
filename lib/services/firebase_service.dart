@@ -51,7 +51,7 @@ class FirebaseService {
              'email': email,
              'name': userName,
              'createdAt': FieldValue.serverTimestamp(),
-             "imageUrl":"",
+             "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ6VSlyr2ZN7oh06f7pDKKsKK3I-maXNkvpA&s",
              "verified":false,
              "updatedAt": FieldValue.serverTimestamp(),
            });
@@ -137,6 +137,7 @@ class FirebaseService {
   Future<void> signOut() async {
     await _auth.signOut();
     await _googleSignIn.signOut();
+
   }
 
   // 🔹 Create or Update Firestore Document

@@ -8,6 +8,9 @@ import 'package:task_manager/l10n/l10n.dart';
 import 'package:task_manager/repositories/auth_repository.dart';
 import 'package:task_manager/router/router.gr.dart';
 import 'package:task_manager/components/forms/small_form_svg.dart';
+import 'package:task_manager/services/dialog_service.dart';
+
+import '../../../services/locator_service.dart';
 
 class ChangeEmailScreen extends StatelessWidget {
   const ChangeEmailScreen({Key? key}) : super(key: key);
@@ -59,17 +62,7 @@ class _ChangeEmailScreen extends StatelessWidget{
           isLoading: formState.isLoading,
           buttonText: context.l10n.continue_button,
           onButtonPressed: () async {
-            try{
-              context.read<ChangeEmailCubit>().submitted(
-                context: context,
-                email: emailController.text.trim(),
-                emailConfirmation: emailConfirmationController.text.trim()
-              );
-
-              final nextState = await context.read<ChangeEmailCubit>().stream.first;
-              if(nextState.emailSent) AutoRouter.of(context).replace(const ChangeEmailVerificationRoute());
-            }
-            catch(_){}
+            locator<DialogService>().showSomethingWentWrongDialog("Feature Coming Soon");
           },
         );
       }
