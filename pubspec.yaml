@@ -69,9 +69,13 @@ flutter_native_splash:
   color: "#F0F2F5"
   color_dark: "#1F1D2C"
 
+dependency_overrides:
+  percent_indicator: 4.2.3
+
 flutter:
   generate: true
   uses-material-design: true
+
 
   assets:
     - assets/icons/
