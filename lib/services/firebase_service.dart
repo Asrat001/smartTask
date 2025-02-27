@@ -29,12 +29,12 @@ class FirebaseService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  // 🔹 Get Current User
+
   User? get currentUser => _auth.currentUser;
  FirebaseService(){
    _firestore.settings=const Settings(persistenceEnabled: true);
  }
-  // 🔹 Sign Up with Email & Password
+  //  Sign Up with Email & Password
   Future<User?> signUpWithEmail(String email, String password,String userName) async {
     try {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
@@ -72,7 +72,7 @@ class FirebaseService {
     }
   }
 
-  // 🔹 Sign In with Email & Password
+  //  Sign In with Email & Password
   Future<User?> signInWithEmail(String email, String password) async {
     try {
       UserCredential credential = await _auth.signInWithEmailAndPassword(
@@ -86,7 +86,7 @@ class FirebaseService {
     }
   }
 
-  // 🔹 Google Sign-In
+  //  Google Sign-In
   Future<User?> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
@@ -133,14 +133,14 @@ class FirebaseService {
   }
   }
 
-  // 🔹 Sign Out
+  //  Sign Out
   Future<void> signOut() async {
     await _auth.signOut();
     await _googleSignIn.signOut();
 
   }
 
-  // 🔹 Create or Update Firestore Document
+  //  Create or Update Firestore Document
   Future<void> saveData(String collection, String docId, Map<String, dynamic> data) async {
     try {
       await _firestore.collection(collection).doc(docId).set(data, SetOptions(merge: true));
@@ -210,7 +210,7 @@ class FirebaseService {
       return Stream.value([]); // Return an empty stream in case of error
     }
   }
-  // 🔹 Read Firestore Document
+  //  Read Firestore Document
   Future<DocumentSnapshot?> getData(String collection, String docId) async {
     try {
       return await _firestore.collection(collection).doc(docId).get();
@@ -221,7 +221,7 @@ class FirebaseService {
   }
 
 
-  /// 🔥 Get real-time stream of categories for a user
+  ///  Get real-time stream of categories for a user
   Stream<List<Category>> streamUserCategories(String userId) {
     return _firestore.collection('categories')
         .where('userId', isEqualTo: userId)
@@ -229,17 +229,17 @@ class FirebaseService {
         .map((snapshot) => snapshot.docs.map((doc) => Category.fromJson(doc.data())).toList());
   }
 
-  /// ✅ Create a new category
+  ///  Create a new category
   Future<void> createCategory(Category category) async {
     await _firestore.collection('categories').add(category.toJson());
   }
 
-  /// ✏️ Update an existing category
+  ///  Update an existing category
   Future<void> updateCategory(String categoryId, Map<String, dynamic> updates) async {
     await _firestore.collection('categories').doc(categoryId).update(updates);
   }
 
-  /// ❌ Delete a category
+  ///  Delete a category
   Future<void> deleteCategory(String categoryId) async {
     await _firestore.collection('categories').doc(categoryId).delete();
   }

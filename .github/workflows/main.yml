@@ -23,6 +23,9 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
+      - name: Clean up Gradle cache
+        run: rm -rf ~/.gradle/caches
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
