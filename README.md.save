@@ -5,7 +5,7 @@ Smart Task Manager is a Flutter application designed to help users manage their 
 
 ## Project Details
 
-- **Flutter Version**: 3.x.x (Ensure you have the latest stable version)
+- **Flutter Version**: 2.10.3 or Latest
 - **Dart SDK**: `>=2.16.1 <3.0.0`
 - **State Management**: BLoC
 - **Backend**: Firebase
@@ -27,7 +27,7 @@ Smart Task Manager is a Flutter application designed to help users manage their 
 Ensure you have the following installed:
 - [Flutter SDK](https://flutter.dev/docs/get-started/install)
 - Dart SDK
-- Android Studio or Visual Studio Code (recommended IDEs)
+- Android Studio
 - Firebase account (for authentication and notifications)
 
 ### Steps to Run
@@ -63,37 +63,14 @@ Ensure you have the following installed:
 ## Folder Structure
 
 ```plaintext
-task_manager-main/
-│── .dart_tool/
-│── .github/
-│── .idea/
-│── .vscode/
-│── android/
-│── assets/
-│── build/
-│── ios/
-│── lib/
-│   ├── blocs/
-│   ├── bottom_sheets/
-│   ├── components/
-│   ├── cubits/
-│   ├── helpers/
-│   ├── l10n/
-│   ├── messaging/
-│   ├── models/
-│   ├── repositories/
-│   ├── router/
-│   ├── screens/
-│   ├── services/
-│   ├── theme/
-│   ├── validators/
-│   ├── app.dart
-│   ├── constants.dart
-│   ├── firebase_options.dart
-│   ├── generated_plugin_registrant.dart
-│   ├── main.dart
-│── analysis_options.yaml
+lib/
+│-- src/
+│   │-- router
+│   │-- Repositories
+│   │-- Screens
+│   │-- bloc/ (State management using BLoC)
 
+│   │-- main.dart (Entry point)
 ```
 
 ## Dependencies
