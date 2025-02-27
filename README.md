@@ -101,9 +101,8 @@ task_manager-main/
 Key dependencies used in the project:
 - **State Management**: BLoC (`flutter_bloc`, `bloc_concurrency`)
 - **Database**: Drift (SQLite)
-- **Networking**: Dio, Retrofit
 - **Authentication**: Firebase Auth, Google Sign-In
-- **UI Components**: Cached Network Image, Flutter Map, Fl Chart, Animated Lists
+- **UI Components**: Cached Network Image, Fl Chart, Animated Lists
 - **Notifications**: Firebase Messaging, Awesome Notifications
 
 ## Additional Commands
